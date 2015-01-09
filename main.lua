@@ -7,7 +7,7 @@ local start = display.newImage( "Graphics/Start Screen.jpg" )
 start.x = 512; start.y = 384
 start.width = 1024; start.height = 768
 local startButton = display.newRect( 475, 384, 355, 100 )
-startButton : setFillColor( 0, 0.8, 0.2, 0.2 )
+startButton : setFillColor( 0.6, 0, 0.2, 0.2 )
 function buttonPress( )
   Pick.open()
 end
