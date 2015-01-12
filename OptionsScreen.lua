@@ -10,6 +10,7 @@ function t.open()
   local backButton = display.newRect(group, 100, 53, 160, 65 )
   backButton : setFillColor( 0, 0, 0.2, 0.2 )
   function backPress()
+    startScreen.open()
     group:removeSelf()
   end
   backButton:addEventListener( "tap", backPress )

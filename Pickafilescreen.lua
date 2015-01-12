@@ -1,5 +1,4 @@
 local t = {}
-local genderScreen = require "GenderScreen"
 
 function t.open()
   local group = display.newGroup()
@@ -11,6 +10,7 @@ function t.open()
   local backButton = display.newRect(group, 940, 70, 150, 64 )
   backButton : setFillColor( 0, 0, 1, 0.2 )
   function backPress()
+    startScreen.open()
     group:removeSelf()
   end
   backButton:addEventListener( "tap", backPress )
@@ -18,6 +18,7 @@ function t.open()
   treeButton2 : setFillColor( 0, 0, 1, 0.2 )
   function treePress()
     genderScreen.open()
+    group:removeSelf()
   end
 end
 

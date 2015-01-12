@@ -1,3 +1,6 @@
 -- Nolan Luke M. Zach G. Kate
-local startScreen = require "StartScreen"
+startScreen = require "StartScreen"
+genderScreen = require "GenderScreen"
+pickScreen = require "Pickafilescreen"
+optionsScreen = require "OptionsScreen"
 startScreen.open()
