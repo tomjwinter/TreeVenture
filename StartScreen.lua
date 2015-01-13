@@ -7,16 +7,16 @@ function t.open()
   start.width = 1024; start.height = 768
   local startButton = display.newRect( group, 475, 384, 355, 100 )
   startButton : setFillColor( 0, 0, 0.2, 0.2 )
-  function buttonPress( )
-    group:removeSelf()
+  function buttonPress()
     pickScreen.open()
+    group:removeSelf()
   end
   startButton : addEventListener( "tap", buttonPress )
   local optButton = display.newRect( group, 475, 545, 355, 100 )
   optButton : setFillColor( 0, 0, 0.2, 0.2 )
   function optPress()
-    group:removeSelf()
     optionsScreen.open()
+    group:removeSelf()
   end
   optButton : addEventListener( "tap", optPress )
 

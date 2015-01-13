@@ -20,6 +20,7 @@ function t.open()
     genderScreen.open()
     group:removeSelf()
   end
+  treeButton2:addEventListener( "tap", treePress )
 end
 
 return t
