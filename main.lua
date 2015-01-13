@@ -3,4 +3,5 @@ startScreen = require "StartScreen"
 genderScreen = require "GenderScreen"
 pickScreen = require "Pickafilescreen"
 optionsScreen = require "OptionsScreen"
+playingScreen = require "PlayingScreen"
 startScreen.open()
