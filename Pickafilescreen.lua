@@ -14,13 +14,19 @@ function t.open()
     group:removeSelf()
   end
   backButton:addEventListener( "tap", backPress )
+  local treeButton1 = display.newRect(group, 150, 300, 225, 500 )
+  treeButton1 : setFillColor( 0, 0, 1, 0.2 )
   local treeButton2 = display.newRect(group, 475, 465, 225, 500 )
   treeButton2 : setFillColor( 0, 0, 1, 0.2 )
+  local treeButton3 = display.newRect(group, 825, 325, 225, 390 )
+  treeButton3 : setFillColor( 0, 0, 1, 0.2 )
   function treePress()
     genderScreen.open()
     group:removeSelf()
   end
+  treeButton1:addEventListener( "tap", treePress )
   treeButton2:addEventListener( "tap", treePress )
+  treeButton3:addEventListener( "tap", treePress )
 end
 
 return t
