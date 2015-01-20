@@ -5,4 +5,5 @@ pickScreen = require "Pickafilescreen"
 optionsScreen = require "OptionsScreen"
 playingScreen = require "PlayingScreen"
 journalScreen = require "JournalScreen"
+notDone = require "NotDoneYet"
 startScreen.open()
