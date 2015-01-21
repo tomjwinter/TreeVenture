@@ -6,4 +6,5 @@ optionsScreen = require "OptionsScreen"
 playingScreen = require "PlayingScreen"
 journalScreen = require "JournalScreen"
 notDone = require "NotDoneYet"
+treeInfo = require "TreeInfo"
 startScreen.open()
