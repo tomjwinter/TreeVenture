@@ -16,6 +16,9 @@ function t.open()
   
   --Create an image of the D-Pad
   -- and set the location and size
+  local dPad = display.newImage(group, "Graphics/D-Pad.png" )
+  dPad.x = 100; dPad.y = 675
+  dPad.width = 225; dPad.height = 275
   
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 710; tree.y = 320
