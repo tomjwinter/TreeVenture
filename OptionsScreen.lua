@@ -16,7 +16,14 @@ function t.open()
   backButton:addEventListener( "tap", backPress )
   local deleteButton = display.newRect(group, 470, 300, 370, 100 )
   deleteButton : setFillColor( 0, 0, 0.2, 0.2 )
-  function deleteButton()
+  function deletePress()
+    pickScreen.open()
+    group:removeSelf()
+  end
+deleteButton:addEventListener( "tap", deletePress )
+  local soundButton = display.newRect(group, 470, 450, 370, 100)
+  soundButton : setFillColor( 0, 0, 0.2, 0.2 )
+  function soundButton()
   end
 end
 return t
