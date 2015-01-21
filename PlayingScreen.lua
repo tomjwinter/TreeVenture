@@ -8,6 +8,9 @@ function t.open()
   play.width = 1024; play.height = 768
   play.alpha = 0
   transition.fadeIn( play )
+  local boy = display.newImage(group, "Graphics/Boy.png" )
+  boy.x = 210; boy.y = 350
+  boy.width = 100; boy.height = 190
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 710; tree.y = 320
   tree.width = 200; tree.height = 300
