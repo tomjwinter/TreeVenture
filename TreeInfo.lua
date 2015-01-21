@@ -14,6 +14,11 @@ function t.open()
   --Adds a transition to the screen
   background.alpha = 0
   transition.fadeIn( background )
+  
+  --Adds Tree
+  local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
+  tree.x = 512; tree.y = 384
+  tree.width = 950; tree.height = 750
 end
 
 return t
