@@ -1,7 +1,6 @@
 t = {}
 
 function t.open()
-  print("HI")
   local group = display.newGroup()
   local play = display.newImage(group, "Graphics/Tree Game Background.jpg" )
   play.x = 512; play.y = 384
@@ -24,7 +23,7 @@ function t.open()
   --local treebutton = display.newRect(group, 710, 320, 200, 300 )
   --treebutton:setFillColor( 0, 0, 0.6, 0.2 )
   function treePress()
-    notDone.open()
+    treeInfo.open()
     group:removeSelf()
   end
   tree:addEventListener( "tap", treePress )
