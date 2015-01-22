@@ -17,7 +17,7 @@ function t.open()
   local deleteButton = display.newRect(group, 470, 300, 370, 100 )
   deleteButton : setFillColor( 0, 0, 0.2, 0.2 )
   function deletePress()
-    pickScreen.open()
+    deleteScreen.open()
     group:removeSelf()
   end
   deleteButton:addEventListener( "tap", deletePress )
