@@ -20,10 +20,15 @@ function t.open()
     pickScreen.open()
     group:removeSelf()
   end
-deleteButton:addEventListener( "tap", deletePress )
+  deleteButton:addEventListener( "tap", deletePress )
   local soundButton = display.newRect(group, 470, 450, 370, 100)
   soundButton : setFillColor( 0, 0, 0.2, 0.2 )
-  function soundButton()
+  function soundPress()
   end
+  function soundPress()
+    soundScreen.open()
+    group:removeSelf()
+  end
+  soundButton:addEventListener( "tap", soundPress )
 end
 return t
