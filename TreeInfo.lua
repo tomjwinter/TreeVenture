@@ -17,8 +17,11 @@ function t.open()
   
   --Adds Tree
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
-  tree.x = 512; tree.y = 384
-  tree.width = 950; tree.height = 750
+  tree.x = 612; tree.y = 384
+  tree.width = 800; tree.height = 750
+  
+  --Adds a rectangle
+  local rootsBox = display.newRect(group, 462, 594, 100, 50 )
 end
 
 return t
