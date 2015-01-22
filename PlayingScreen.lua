@@ -20,6 +20,13 @@ function t.open()
   dPad.x = 100; dPad.y = 675
   dPad.width = 225; dPad.height = 275
   
+  --Create an image of the backpack
+  -- and set the location and size
+  local backpack = display.newImage(group, "Graphics/Backpack.png")
+  backpack.x = 775; backpack.y = 670
+  backpack.width = 200; backpack.height = 200
+  
+  --Create an image of the journal
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 710; tree.y = 320
   tree.width = 200; tree.height = 300
