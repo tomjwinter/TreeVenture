@@ -27,9 +27,13 @@ function t.open()
   backpack.width = 200; backpack.height = 200
   
   --Create an image of the journal
+  -- and set the location and size
+  local journal = display.newImage(group, "Graphics/Journal.png")
+  journal.x = 945; journal.y = 660
+  journal.width = 330; journal.height = 300
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
-  tree.x = 710; tree.y = 320
-  tree.width = 200; tree.height = 300
+  tree.x = 750; tree.y = 350
+  tree.width = 300; tree.height = 330
   --local treebutton = display.newRect(group, 710, 320, 200, 300 )
   --treebutton:setFillColor( 0, 0, 0.6, 0.2 )
   function treePress()
