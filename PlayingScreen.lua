@@ -50,6 +50,13 @@ function t.open()
     --group:removeSelf()
   end
   journalButton:addEventListener( "tap", journalPress )
+  
+  local hungerBar = display.newRect(group, 280, 660, 150, 40 )
+  
+  local buildingBar = display.newRect(group, 440, 730, 150, 40) 
+  
+  local otherBar = display.newRect(group, 600, 660, 150, 40)
+  
 end
 
 return t
