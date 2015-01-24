@@ -30,7 +30,7 @@ function t.open()
   -- and set the location and size
   local journal = display.newImage(group, "Graphics/Journal.png")
   journal.x = 945; journal.y = 660
-  journal.width = 330; journal.height = 300
+  journal.width = 170; journal.height = 170
   
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 750; tree.y = 350
