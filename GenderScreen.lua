@@ -30,7 +30,7 @@ function t.open()
   local girlButton = display.newRect(group, 777, 440, 250, 300 )
   girlButton:setFillColor( 0, 0, 0.6, 0.2 )
   
-  --this creates a function that opensthe playing screen
+  --this creates a function that opens the playing screen
   function girlPress()
     playingScreen.open()
     group:removeSelf()
