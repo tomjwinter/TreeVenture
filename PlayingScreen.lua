@@ -42,20 +42,33 @@ function t.open()
   tree.width = 300; tree.height = 330
   
   --This creates a function
-  -- this function
+  -- this function tells the device to open the treeInfo screen
   function treePress()
     treeInfo.open()
     group:removeSelf()
   end
+  
+  --This tells the device to listen for a tap on the tree
+  -- when it gets the tap it does the treePress function
   tree:addEventListener( "tap", treePress )
+  
+  --This displays a new rectangle for the journal
+  -- and sets the size, color, and location
   local journalButton = display.newRect(group, 945, 660, 130, 160 )
   journalButton:setFillColor( 0, 0, 0.6, 0.2 )
+  
+  --This creates a function
+  -- this function tells the device to open the journal screen
   function journalPress()
     journalScreen.open()
     --group:removeSelf()
   end
+  
+  --This tells the device to listen for a tap
+  -- when it gets the tap it does the journalPress function
   journalButton:addEventListener( "tap", journalPress )
   
+  --This
   local hungerBar = display.newRect(group, 280, 660, 150, 40 )
   
   local buildingBar = display.newRect(group, 440, 730, 150, 40) 
