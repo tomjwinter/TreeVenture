@@ -23,7 +23,7 @@ function t.open()
   
   --Adds a rectangle
   -- and sets the size and location
-  local rootsBox = display.newRect(group, 462, 594, 100, 50 )
+  local rootsBox = display.newRect(group, 635, 715, 315, 60 )
 end
 
 return t
