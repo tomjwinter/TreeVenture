@@ -26,12 +26,23 @@ function t.open()
   --This tells the device to listen for a tap on the backBbutton
   -- when it gets the tap it does the backPress function
   backButton:addEventListener( "tap", backPress )
+  
+  --This creates a rectangle
+  -- and it sets the size, color, and location
   local treeButton1 = display.newRect(group, 150, 300, 225, 500 )
   treeButton1 : setFillColor( 0, 0, 1, 0.2 )
+  
+  --This creates a rectangle
+  -- and sets the size, color, and location
   local treeButton2 = display.newRect(group, 475, 465, 225, 500 )
   treeButton2 : setFillColor( 0, 0, 1, 0.2 )
+  
+  --This creates a rectangle
+  -- and sets the size, color, and location
   local treeButton3 = display.newRect(group, 825, 325, 225, 390 )
   treeButton3 : setFillColor( 0, 0, 1, 0.2 )
+  
+  --
   function treePress()
     genderScreen.open()
     group:removeSelf()
