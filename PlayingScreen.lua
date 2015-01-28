@@ -68,11 +68,13 @@ function t.open()
   -- when it gets the tap it does the journalPress function
   journalButton:addEventListener( "tap", journalPress )
   
-  --This
+  --This displays a rectangle for the hunger bar
   local hungerBar = display.newRect(group, 280, 660, 150, 40 )
   
+  --This displays a rectangle for the building bar
   local buildingBar = display.newRect(group, 440, 730, 150, 40) 
   
+  --This displays a rectangle for the weight bar
   local weightBar = display.newRect(group, 600, 660, 150, 40)
   
 end
