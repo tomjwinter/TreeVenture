@@ -10,8 +10,9 @@ function t.open()
   local backButton = display.newRect(group, 940, 70, 150, 64 )
   backButton : setFillColor( 0, 0, 1, 0.2 )
   function backPress()
-    OptionsScreen.open()
+    optionsScreen.open()
     group:removeSelf()
   end
+  backButton:addEventListener( "tap", backPress )
 end
 return t
