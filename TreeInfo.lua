@@ -16,11 +16,13 @@ function t.open()
   transition.fadeIn( background )
   
   --Adds Tree
+  -- and sets the size and location
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 612; tree.y = 384
   tree.width = 800; tree.height = 750
   
   --Adds a rectangle
+  -- and sets the size and location
   local rootsBox = display.newRect(group, 462, 594, 100, 50 )
 end
 
