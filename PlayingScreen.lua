@@ -1,6 +1,9 @@
 t = {}
 
 function t.open()
+  
+  --Makes the Tree Game Backround appear on the screen
+  -- and sets the location and size
   local group = display.newGroup()
   local play = display.newImage(group, "Graphics/Tree Game Background.jpg" )
   play.x = 512; play.y = 384
@@ -32,12 +35,14 @@ function t.open()
   journal.x = 945; journal.y = 660
   journal.width = 170; journal.height = 170
   
+  --Creates the image of the tree
+  -- and sets location and size
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 750; tree.y = 350
   tree.width = 300; tree.height = 330
   
-  --local treebutton = display.newRect(group, 710, 320, 200, 300 )
-  --treebutton:setFillColor( 0, 0, 0.6, 0.2 )
+  --This creates a function
+  -- this function
   function treePress()
     treeInfo.open()
     group:removeSelf()
