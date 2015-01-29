@@ -12,7 +12,8 @@ function t.open()
   transition.fadeIn( play )
   
   --adds the backstory
-  --backStory = display.newText( "You are out hiking. You trip, fall, and...", 
+  backStory = display.newText( "You are out hiking. You trip, fall, and...", 512, 134, "Arial", 60 )
+  backStory:setFillColor( 0, 0, 0 )
   
   --Create an image of your character
   -- and set the location and size
