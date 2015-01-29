@@ -11,10 +11,6 @@ function t.open()
   play.alpha = 0
   transition.fadeIn( play )
   
-  --adds the backstory
-  backStory = display.newText( "You are out hiking. You trip, fall, and...", 512, 134, "Arial", 60 )
-  backStory:setFillColor( 0, 0, 0 )
-  
   --Create an image of your character
   -- and set the location and size
   local boy = display.newImage(group, "Graphics/Boy.png" )
@@ -101,6 +97,14 @@ function t.open()
   local rhruu = display.newRect( group, 600, 660, 147, 37 )
   rhruu:setFillColor( 1, .5, 0 )
   
+  --adds the backstory
+  local backStory = display.newText( "You are out hiking. You trip, fall, and...", 512, 134, "Arial", 60 )
+  backStory:setFillColor( 0, 0, 0 )
+  --timer.performWithDelay( 2000, moreBackStory )
+  function moreBackStory()
+    backStory.alpha = 0
+    moreStory = display.newText( "You break your compass!", 512, 134, "Arial", 60 )
+  end
 end
 
 return t
