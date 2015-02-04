@@ -69,31 +69,22 @@ function t.open()
   journalButton:addEventListener( "tap", journalPress )
   
   --This displays a rectangle for the hunger bar
-  local hungerBar = display.newRect(group, 280, 660, 150, 40 )
-  local paint = { 0, 0, 0 }
-  --hungerBar.stroke = paint
-  --hungerBar.strokeWidth = 4
-  hungerBar:setFillColor( 0, 0, 0, 0 )
+  local hungerBar = display.newRect(group, 280, 660, 155, 45 )
+  hungerBar:setFillColor( 0, 0, 0 )
   
   --Adds the inside of the hunger bar
   local fhruu = display.newRect( group, 280, 660, 147, 37 )
   fhruu:setFillColor( 0, 0, 1 )
   
   --This displays a rectangle for the building bar
-  local buildingBar = display.newRect(group, 440, 730, 150, 40) 
-  local paint = { 0, 0, 0 }
-  --buildingBar.stroke = paint
-  --buildingBar.strokeWidth = 4
-  buildingBar:setFillColor( 0, 0, 0, 0 )
+  local buildingBar = display.newRect(group, 440, 730, 155, 45) 
+  buildingBar:setFillColor( 0, 0, 0 )
   local dhruu = display.newRect( group, 440, 730, 147, 37 )
-  dhruu:setFillColor( .4, 1, 0 )
+  dhruu:setFillColor(0, 1, 0 )
   
   --This displays a rectangle for the weight bar
-  local weightBar = display.newRect(group, 600, 660, 150, 40)
-  local paint = { 0, 0, 0 }
-  --weightBar.stroke = paint
-  --weightBar.strokeWidth = 4
-  weightBar:setFillColor( 0, 0, 0, 0 )
+  local weightBar = display.newRect(group, 600, 660, 155, 45)
+  weightBar:setFillColor( 0, 0, 0 )
   local rhruu = display.newRect( group, 600, 660, 147, 37 )
   rhruu:setFillColor( 1, .5, 0 )
   
