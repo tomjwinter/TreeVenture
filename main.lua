@@ -10,4 +10,5 @@ treeInfo = require "TreeInfo"
 soundScreen = require "SoundScreen"
 deleteScreen = require "DeleteAFileScreen"
 utillScreen = require "Utilities"
+treeGame1Screen = require "treegame1"
 startScreen.open()
