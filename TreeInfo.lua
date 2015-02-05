@@ -60,6 +60,31 @@ function t.open()
  --Adds a blank rectangle for leaves
  -- and sets the location and size
  local blankLeavesBox = display.newRect(group, 850, 150, 250, 75 )
+ 
+ --Displays the word roots in the box
+ -- and sets the size, font, and location
+ local wordRoot = display.newText(group,"Roots" , 200, 600, "Arial", 60 )
+ wordRoot:setFillColor( 0, 0, 0 )
+ 
+ --Displays the word trunk
+ -- and sets the size, font, and color
+ local wordTrunk = display.newText(group,"Trunk" , 200, 255, "Arial", 60 )
+ wordTrunk:setFillColor( 0, 0, 0 )
+ 
+ --Displays the word bark
+ -- and sets the size, font, and location
+ local wordBark = display.newText(group,"Bark" , 200, 370, "Arial", 60 )
+ wordBark:setFillColor( 0, 0, 0 )
+
+--Displays the word branches
+-- and sets the size, font, and color
+local wordBranches = display.newText(group,"Branches" , 200, 715, "Arial", 60 )
+wordBranches:setFillColor( 0, 0, 0 )
+
+--Displays the word leaves
+-- and sets the size, font, and color
+local wordLeaves = display.newText(group,"Leaves" , 200, 485, "Arial", 60 )
+wordLeaves:setFillColor( 0, 0, 0 )
    end
 
 return t
