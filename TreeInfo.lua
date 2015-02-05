@@ -47,19 +47,19 @@ function t.open()
  
  --Adds blank rectangle for the trunk
  -- and sets location and size
- local blankTrunkBox = display.newRect(group, 700, 550, 125, 200 )
+ local blankTrunkBox = display.newRect(group, 500, 550, 275, 75 )
  
  --Adds blank rectangle for bark
  -- and sets the location and size
- local blankBarkBox = display.newRect(group, 900, 550, 225, 75 )
+ local blankBarkBox = display.newRect(group, 875, 500, 275, 75 )
  
  --Adds blank rectangle for branches
  -- and sets the location and size
- local blankBranchesBox = display.newRect(group, 675, 275, 200, 90 )
+ local blankBranchesBox = display.newRect(group, 850, 275, 300, 75 )
  
  --Adds a blank rectangle for leaves
  -- and sets the location and size
- local blankLeavesBox = display.newRect(group, 850, 150, 250, 75 )
+ local blankLeavesBox = display.newRect(group, 850, 150, 300, 75 )
  
  --Displays the word roots in the box
  -- and sets the size, font, and location
@@ -85,6 +85,19 @@ wordBranches:setFillColor( 0, 0, 0 )
 -- and sets the size, font, and color
 local wordLeaves = display.newText(group,"Leaves" , 200, 485, "Arial", 60 )
 wordLeaves:setFillColor( 0, 0, 0 )
-   end
+
+function wordDrag( event )
+  print("Hi")
+  if event.phase == "moved" then
+    event.target.x = event.x
+    event.target.y = event.y
+  end
+ end
+ wordLeaves:addEventListener( "touch", wordDrag )
+ wordBranches:addEventListener( "touch", wordDrag )
+ wordBark:addEventListener( "touch", wordDrag )
+ wordRoot:addEventListener( "touch", wordDrag )
+ wordTrunk:addEventListener( "touch", wordDrag )
+end
 
 return t
