@@ -65,32 +65,42 @@ function t.open()
  -- and sets the size, font, and location
  local wordRoot = display.newText(group,"Roots" , 200, 600, "Arial", 60 )
  wordRoot:setFillColor( 0, 0, 0 )
+ wordRoot.destination = blankRootsBox
  
  --Displays the word trunk
  -- and sets the size, font, and color
  local wordTrunk = display.newText(group,"Trunk" , 200, 255, "Arial", 60 )
  wordTrunk:setFillColor( 0, 0, 0 )
+ wordTrunk.destination = blankTrunkBox
  
  --Displays the word bark
  -- and sets the size, font, and location
  local wordBark = display.newText(group,"Bark" , 200, 370, "Arial", 60 )
  wordBark:setFillColor( 0, 0, 0 )
+ wordBark.destination = blankBarkBox
 
 --Displays the word branches
 -- and sets the size, font, and color
 local wordBranches = display.newText(group,"Branches" , 200, 715, "Arial", 60 )
 wordBranches:setFillColor( 0, 0, 0 )
+wordBranches.destination = blankBranchesBox
 
 --Displays the word leaves
 -- and sets the size, font, and color
 local wordLeaves = display.newText(group,"Leaves" , 200, 485, "Arial", 60 )
 wordLeaves:setFillColor( 0, 0, 0 )
+wordLeaves.destination = blankLeavesBox
 
 function wordDrag( event )
-  print("Hi")
   if event.phase == "moved" then
     event.target.x = event.x
     event.target.y = event.y
+  end
+  if event.phase == "ended" then
+   if overlap( event.target.destination, event.target ) then
+    event.target.x = event.target.destination.x; event.target.y = event.target.destination.y
+    event.target:removeEventListener( "touch", wordDrag )
+   end
   end
  end
  wordLeaves:addEventListener( "touch", wordDrag )
