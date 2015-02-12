@@ -16,7 +16,14 @@ local group = display.newGroup()
   local backpack = display.newImage(group, "Graphics/BackPack for collecting apple minigame.png" )
   backpack.x = 250; backpack.y = 600
   backpack.width = 800; backpack.height = 425
+  local branchapple = display.newText(group,"Branch" , 176, 300, "Arial", 40 )
+  branchapple:setFillColor( 0, 0, 0 )
+  local leaves = display.newRect ( 800, 200, 450, 200 )
+  leaves:setFillColor( 0, 0, 1, .2 )
   
+  --local a = branchapple
+  --if a = branchapple then
+    
 end
 
   return t
