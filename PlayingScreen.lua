@@ -98,6 +98,15 @@ function t.open()
   --display.newRect( group, 600, 660, 147, 37 )
   --rhruu:setFillColor( 1, .5, 0 )
   
+  local pauseButton = display.newImage( "Graphics/Pause.png" )
+  pauseButton.x= 940; pauseButton.y = 100
+  pauseButton.width= 300; pauseButton.height= 350;
+  function pausePress()
+    pauseScreen.open()
+    group:removeSelf()
+  end
+  pauseButton:addEventListener( "tap", pausePress  )
+  
   --adds the backstory
   local backStory = display.newText( "You are out hiking. You trip, fall, and...", 512, 134, "Arial", 60 )
   backStory:setFillColor( 0, 0, 0 )
