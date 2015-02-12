@@ -4,6 +4,7 @@ function t.open()
   local a = 0
   --Creates a group
   local group = display.newGroup()
+  local check = display.newGroup()
   
   --Displays the background
   local background = display.newImage(group, "Graphics/Tree Game Background.jpg" )
@@ -24,23 +25,23 @@ function t.open()
   
   --Adds a rectangle for the word roots
   -- and sets the size and location
-  local rootsBox = display.newRect(group, 200, 715, 300, 75 )
+  local rootsBox = display.newRect(group, 200, 600, 300, 75 )
   
   --Adds a rectangle for the word trunk
   -- and sets the size and location
-  local trunkBox = display.newRect(group, 200, 600, 300, 75 )
+  local trunkBox = display.newRect(group, 200, 255, 300, 75 )
   
   --Adds a rectangle for the word bark
   -- and sets location and size
-  local barkBox = display.newRect(group, 200, 485, 300, 75 )
+  local barkBox = display.newRect(group, 200, 370, 300, 75 )
  
  --Adds a rectangle for the word branches
  -- and sets the size and location
- local branchesBox = display.newRect(group, 200, 370, 300, 75 )
+ local branchesBox = display.newRect(group, 200, 715, 300, 75 )
  
  --Adds a rectangle for the word leaves
  -- and sets the size and location
- local leavesBox = display.newRect(group, 200, 255, 300, 75 )
+ local leavesBox = display.newRect(group, 200, 485, 300, 75 )
  
  --Adds blank rectangle for roots
  -- and sets location and size
@@ -67,45 +68,70 @@ function t.open()
  local wordRoot = display.newText(group,"Roots" , 200, 600, "Arial", 60 )
  wordRoot:setFillColor( 0, 0, 0 )
  wordRoot.destination = blankRootsBox
+ wordRoot.origin = rootsBox
  
  --Displays the word trunk
  -- and sets the size, font, and color
  local wordTrunk = display.newText(group,"Trunk" , 200, 255, "Arial", 60 )
  wordTrunk:setFillColor( 0, 0, 0 )
  wordTrunk.destination = blankTrunkBox
+ wordTrunk.origin = trunkBox
  
  --Displays the word bark
  -- and sets the size, font, and location
  local wordBark = display.newText(group,"Bark" , 200, 370, "Arial", 60 )
  wordBark:setFillColor( 0, 0, 0 )
  wordBark.destination = blankBarkBox
+ wordBark.origin = barkBox
 
 --Displays the word branches
 -- and sets the size, font, and color
 local wordBranches = display.newText(group,"Branches" , 200, 715, "Arial", 60 )
 wordBranches:setFillColor( 0, 0, 0 )
 wordBranches.destination = blankBranchesBox
+wordBranches.origin = branchesBox
 
 --Displays the word leaves
 -- and sets the size, font, and color
 local wordLeaves = display.newText(group,"Leaves" , 200, 485, "Arial", 60 )
 wordLeaves:setFillColor( 0, 0, 0 )
 wordLeaves.destination = blankLeavesBox
+wordLeaves.origin = leavesBox
 
 function wordDrag( event )
+  local target = event.target
+  local destination = event.target.destination
+  local origin = event.target.origin
   if event.phase == "moved" then
-    event.target.x = event.x
-    event.target.y = event.y
+    target.x = event.x
+    target.y = event.y
   end
   if event.phase == "ended" then
-   if overlap( event.target.destination, event.target ) then
-    event.target.x = event.target.destination.x; event.target.y = event.target.destination.y
-    event.target:removeEventListener( "touch", wordDrag )
+   if overlap( target.destination, target ) then
+    target.x = destination.x; target.y = destination.y
+    target:removeEventListener( "touch", wordDrag )
+    local checkbox = display.newImage( check, "Graphics/Checkmark.png" )
+    checkbox.x = origin.x; checkbox.y = origin.y
+    checkbox.width = 100; checkbox.height = 100
+    target.alpha = 0
+    origin:removeSelf()
     a = a + 1
+    else
+      target.x = origin.x; target.y = origin.y
    end
    if a == 5 then
-  print( "A = 5!!!" )
+    check:removeSelf()
+    wordLeaves.alpha = 1
+    wordBark.alpha = 1
+    wordBranches.alpha = 1
+    wordRoot.alpha = 1
+    wordTrunk.alpha = 1
+    info()
    end
+   function info()
+     local directions = display.newText( "Click on each word part to learn about it.", 512, 34, "Arial", 50 )
+     directions:setFillColor( 0, 0, 0 )
+    end
   end
  end
  wordLeaves:addEventListener( "touch", wordDrag )
