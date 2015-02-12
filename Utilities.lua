@@ -7,6 +7,6 @@ function bar( percent, Rcolor, Gcolor, Bcolor, name, x, y )
 end
 
 function overlap(object1, object2)
-  return (object2.x - object2.width/2 < object1.x + object1.width/2 and object2.x + object2.width/2 > object1.x - object1.width/2);
+  return (object2.x - object2.width/2 < object1.x + object1.width/2 and object2.x + object2.width/2 > object1.x - object1.width/2 and object2.y - object2.height/2 < object1.y + object1.height/2 and object2.y + object2.height/2 > object1.y - object1.height/2 );
 end
 return t

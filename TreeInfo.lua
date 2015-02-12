@@ -1,6 +1,7 @@
 t = {}
 
 function t.open()
+  local a = 0
   --Creates a group
   local group = display.newGroup()
   
@@ -100,6 +101,10 @@ function wordDrag( event )
    if overlap( event.target.destination, event.target ) then
     event.target.x = event.target.destination.x; event.target.y = event.target.destination.y
     event.target:removeEventListener( "touch", wordDrag )
+    a = a + 1
+   end
+   if a == 5 then
+  print( "A = 5!!!" )
    end
   end
  end
