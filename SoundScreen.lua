@@ -6,7 +6,7 @@ function t.open()
   
   --Creates the sound screen and 
   --sets its size and cordinates
-  local sound = display.newImage( group, "Graphics/soundscreenlolprototype.png" )
+  local sound = display.newImage( group, "Graphics/Tree Game Background.jpg" )
   sound.x = 512; sound.y = 384
   sound.width = 1024; sound.height = 768
   sound.alpha = 0
@@ -27,6 +27,10 @@ function t.open()
   --This adds and event listener that
   --when backButton is tapped it calls the function backPress
   backButton:addEventListener( "tap", backPress )
-end
+   local sownd = display.newImage(group, "Graphics/SoundScreen.png" )
+  sownd.x = 512; sownd.y = 384
+  sownd.width = 1200; sownd.height = 800
+  end
+  
 
 return t
