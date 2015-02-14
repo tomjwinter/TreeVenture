@@ -128,9 +128,18 @@ function wordDrag( event )
     wordTrunk.alpha = 1
     info()
    end
+   function info2( event )
+    event.target.info = display.newText( text.roots, 300, 584, 500, 700, "Arial", 60 )
+    event.target.info:setFillColor( 0, 0, 0 )
+    end
    function info()
      local directions = display.newText( "Click on each word part to learn about it.", 512, 34, "Arial", 50 )
      directions:setFillColor( 0, 0, 0 )
+      --wordLeaves:addEventListener( "tap", info2 )
+      --wordBranches:addEventListener( "tap", info2 )
+      --wordBark:addEventListener( "tap", info2 )
+      wordRoot:addEventListener( "tap", info2 )
+      --wordTrunk:addEventListener( "tap", info2 )
     end
   end
  end

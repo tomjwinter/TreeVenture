@@ -12,4 +12,5 @@ deleteScreen = require "DeleteAFileScreen"
 utillScreen = require "Utilities"
 treeGame1Screen = require "treegame1"
 pauseScreen = require "pauseScreen"
+text = require "Text"
 startScreen.open()

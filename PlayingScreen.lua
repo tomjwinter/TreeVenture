@@ -8,15 +8,15 @@ function t.open()
   local play = display.newImage(group, "Graphics/Tree Game Background.jpg" )
   play.x = 512; play.y = 384
   play.width = 1024; play.height = 768
-  play.alpha = 0
-  transition.fadeIn( play )
-  
+  --play.alpha = 0
+  --transition.fadeIn( play )
+
   --Create an image of your character
   -- and set the location and size
   local boy = display.newImage(group, "Graphics/Boy.png" )
   boy.x = 210; boy.y = 350
   boy.width = 100; boy.height = 190
-  
+
   --Create an image of the D-Pad
   -- and set the location and size
   local dPad = display.newImage(group, "Graphics/D-Pad.png" )
@@ -40,7 +40,7 @@ function t.open()
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 750; tree.y = 350
   tree.width = 300; tree.height = 330
-  
+ 
   --This creates a function
   -- this function tells the device to open the treeInfo screen
   function treePress()
@@ -98,7 +98,7 @@ function t.open()
   --display.newRect( group, 600, 660, 147, 37 )
   --rhruu:setFillColor( 1, .5, 0 )
   
-  local pauseButton = display.newImage( "Graphics/Pause.png" )
+  local pauseButton = display.newImage( group, "Graphics/Pause.png" )
   pauseButton.x= 940; pauseButton.y = 100
   pauseButton.width= 300; pauseButton.height= 350;
   function pausePress()
