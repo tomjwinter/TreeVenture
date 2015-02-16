@@ -5,6 +5,7 @@ function t.open()
   --Creates a group
   local group = display.newGroup()
   local check = display.newGroup()
+  local infoString = display.newGroup()
   
   --Displays the background
   local background = display.newImage(group, "Graphics/Tree Game Background.jpg" )
@@ -22,6 +23,10 @@ function t.open()
   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 675; tree.y = 384
   tree.width = 700; tree.height = 700
+  
+  local Bracket = display.newImage(group, "Graphics/Bracket.png" )
+  Bracket.x= 760; Bracket.y = 570
+  Bracket.width = 600 Bracket.height = 600
   
   --Adds a rectangle for the word roots
   -- and sets the size and location
@@ -90,6 +95,7 @@ local wordBranches = display.newText(group,"Branches" , 200, 715, "Arial", 60 )
 wordBranches:setFillColor( 0, 0, 0 )
 wordBranches.destination = blankBranchesBox
 wordBranches.origin = branchesBox
+wordBranches.string = text.branchesString
 
 --Displays the word leaves
 -- and sets the size, font, and color
@@ -128,18 +134,20 @@ function wordDrag( event )
     wordTrunk.alpha = 1
     info()
    end
-   function info2( event )
-    event.target.info = display.newText( text.roots, 300, 584, 500, 700, "Arial", 60 )
+   function info2 ( event )
+     infoString:removeSelf ()
+     infoString = display.newGroup ()
+    event.target.info = display.newText( infoString, event.target.string, 300, 584, 500, 700, "Arial", 60 )
     event.target.info:setFillColor( 0, 0, 0 )
     end
    function info()
      local directions = display.newText( "Click on each word part to learn about it.", 512, 34, "Arial", 50 )
      directions:setFillColor( 0, 0, 0 )
-      --wordLeaves:addEventListener( "tap", info2 )
-      --wordBranches:addEventListener( "tap", info2 )
-      --wordBark:addEventListener( "tap", info2 )
+      wordLeaves:addEventListener( "tap", info2 )
+      wordBranches:addEventListener( "tap", info2 )
+      wordBark:addEventListener( "tap", info2 )
       wordRoot:addEventListener( "tap", info2 )
-      --wordTrunk:addEventListener( "tap", info2 )
+      wordTrunk:addEventListener( "tap", info2 )
     end
   end
  end
