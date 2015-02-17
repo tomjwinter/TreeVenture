@@ -74,6 +74,7 @@ function t.open()
  wordRoot:setFillColor( 0, 0, 0 )
  wordRoot.destination = blankRootsBox
  wordRoot.origin = rootsBox
+ wordRoot.string = text.rootsString
  
  --Displays the word trunk
  -- and sets the size, font, and color
@@ -81,6 +82,7 @@ function t.open()
  wordTrunk:setFillColor( 0, 0, 0 )
  wordTrunk.destination = blankTrunkBox
  wordTrunk.origin = trunkBox
+ wordTrunk.string = text.trunkString
  
  --Displays the word bark
  -- and sets the size, font, and location
@@ -88,6 +90,7 @@ function t.open()
  wordBark:setFillColor( 0, 0, 0 )
  wordBark.destination = blankBarkBox
  wordBark.origin = barkBox
+ wordBark.string = text.barkString
 
 --Displays the word branches
 -- and sets the size, font, and color
@@ -103,6 +106,7 @@ local wordLeaves = display.newText(group,"Leaves" , 200, 485, "Arial", 60 )
 wordLeaves:setFillColor( 0, 0, 0 )
 wordLeaves.destination = blankLeavesBox
 wordLeaves.origin = leavesBox
+wordLeaves.string = text.leavesString
 
 function wordDrag( event )
   local target = event.target
@@ -135,19 +139,19 @@ function wordDrag( event )
     info()
    end
    function info2 ( event )
-     infoString:removeSelf ()
-     infoString = display.newGroup ()
+    infoString:removeSelf ()
+    infoString = display.newGroup ()
     event.target.info = display.newText( infoString, event.target.string, 300, 584, 500, 700, "Arial", 60 )
     event.target.info:setFillColor( 0, 0, 0 )
     end
    function info()
      local directions = display.newText( "Click on each word part to learn about it.", 512, 34, "Arial", 50 )
-     directions:setFillColor( 0, 0, 0 )
-      wordLeaves:addEventListener( "tap", info2 )
-      wordBranches:addEventListener( "tap", info2 )
-      wordBark:addEventListener( "tap", info2 )
-      wordRoot:addEventListener( "tap", info2 )
-      wordTrunk:addEventListener( "tap", info2 )
+    directions:setFillColor( 0, 0, 0 )
+    wordLeaves:addEventListener( "tap", info2 )
+    wordBranches:addEventListener( "tap", info2 )
+    wordBark:addEventListener( "tap", info2 )
+    wordRoot:addEventListener( "tap", info2 )
+    wordTrunk:addEventListener( "tap", info2 )
     end
   end
  end
