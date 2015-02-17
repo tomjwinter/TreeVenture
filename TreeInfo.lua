@@ -25,7 +25,7 @@ function t.open()
   tree.width = 700; tree.height = 700
   
   local Bracket = display.newImage(group, "Graphics/Bracket.png" )
-  Bracket.x= 760; Bracket.y = 570
+  Bracket.x= 688; Bracket.y = 615
   Bracket.width = 600 Bracket.height = 600
   
   --Adds a rectangle for the word roots
