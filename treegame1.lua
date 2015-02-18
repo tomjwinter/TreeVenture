@@ -7,10 +7,10 @@ local group = display.newGroup()
   play.width = 1024; play.height = 768
   play.alpha = 0
   transition.fadeIn( play )
-   local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
+  local tree = display.newImage(group, "Graphics/Transparent Tree.png" )
   tree.x = 800; tree.y = 400
   tree.width = 520; tree.height = 620
-  local branch = display.newImage(group, "Graphics/Tap The Blank.png" )
+  local branch = display.newImage(group, "Graphics/Tap The blank.png" )
   branch.x = 150; branch.y = 250
   branch.width = 350; branch.height = 375
   local backpack = display.newImage(group, "Graphics/BackPack for collecting apple minigame.png" )
