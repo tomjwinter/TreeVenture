@@ -21,6 +21,14 @@ local exitButton = display.newRect( group, 550, 370, 400, 100 )
     group:removeSelf()
 end
 exitButton:addEventListener( "tap", exitPress )
+local saveButton = display.newRect( group, 550, 530, 400, 100 )
+  saveButton:setFillColor( 0, 0, 1, .5 )
+  function savePress()
+    saveScreen.open()
+    group:removeSelf()
+  end
+  saveButton:addEventListener( "tap", savePress )
+
 end
 
 return t
