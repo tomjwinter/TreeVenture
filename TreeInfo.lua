@@ -75,6 +75,7 @@ function t.open()
  wordRoot.destination = blankRootsBox
  wordRoot.origin = rootsBox
  wordRoot.string = text.rootsString
+ wordRoot.isClicked = false
  
  --Displays the word trunk
  -- and sets the size, font, and color
@@ -83,6 +84,7 @@ function t.open()
  wordTrunk.destination = blankTrunkBox
  wordTrunk.origin = trunkBox
  wordTrunk.string = text.trunkString
+ wordTrunk.isClicked = false
  
  --Displays the word bark
  -- and sets the size, font, and location
@@ -91,6 +93,7 @@ function t.open()
  wordBark.destination = blankBarkBox
  wordBark.origin = barkBox
  wordBark.string = text.barkString
+ wordBark.isClicked = false
 
 --Displays the word branches
 -- and sets the size, font, and color
@@ -99,6 +102,7 @@ wordBranches:setFillColor( 0, 0, 0 )
 wordBranches.destination = blankBranchesBox
 wordBranches.origin = branchesBox
 wordBranches.string = text.branchesString
+wordBranches.isClicked = false
 
 --Displays the word leaves
 -- and sets the size, font, and color
@@ -107,6 +111,7 @@ wordLeaves:setFillColor( 0, 0, 0 )
 wordLeaves.destination = blankLeavesBox
 wordLeaves.origin = leavesBox
 wordLeaves.string = text.leavesString
+wordLeaves.isClicked = false
 
 function wordDrag( event )
   local target = event.target
@@ -143,6 +148,7 @@ function wordDrag( event )
     infoString = display.newGroup ()
     event.target.info = display.newText( infoString, event.target.string, 300, 584, 500, 700, "Arial", 60 )
     event.target.info:setFillColor( 0, 0, 0 )
+    event.target.isClicked = true
     end
    function info()
      local directions = display.newText( "Click on each word part to learn about it.", 512, 34, "Arial", 50 )
@@ -152,6 +158,10 @@ function wordDrag( event )
     wordBark:addEventListener( "tap", info2 )
     wordRoot:addEventListener( "tap", info2 )
     wordTrunk:addEventListener( "tap", info2 )
+    if wordLeaves.isClicked and wordBark.isClicked and wordBranches.isClicked and wordRoot.isClicked and wordTrunk.isClicked == true then
+      local doneButton = display.newRect( group, 500, 500, 100, 100 )
+      doneButton:setFillColor( 0, 0, 1 )
+    end
     end
   end
  end
