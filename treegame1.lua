@@ -18,7 +18,7 @@ local group = display.newGroup()
   backpack.width = 800; backpack.height = 425
   local branchapple = display.newText(group,"Branch" , 176, 300, "Arial", 40 )
   branchapple:setFillColor( 0, 0, 0 )
-  local leaves = display.newRect ( 800, 200, 450, 200 )
+  local leaves = display.newRect ( 800, 180, 450, 175 )
   leaves:setFillColor( 0, 0, 1, .2 )
   
   --local a = branchapple
