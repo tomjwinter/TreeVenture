@@ -6,4 +6,6 @@ t.leavesString = "The leaves make sugar and send it to the rest of the tree. The
 t.barkString = "The bark protects the tree. The inner bark takes the food from the leaves to the rest of the tree."
 t.trunkString = "The trunk takes the nutrients from the roots to the branches. It also supports the rest of the tree and makes it strong."
 
+t.wayToGo = "Way to go! You are done!"
+
 return t
