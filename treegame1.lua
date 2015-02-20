@@ -27,8 +27,8 @@ function nextQuiz()
   if quizNumber <= #quiz then
     -- if there are still more quiz questions, display the next one
     currentImage = display.newImage( quiz[quizNumber].image )
-    currentImage.x = 150; currentImage.y = 360
-    currentImage.width = 200; currentImage.height = 200
+    currentImage.x = 200; currentImage.y = 400
+    currentImage.width = 280; currentImage.height = 280
   else
     -- no more questions. done with quiz.
     wayToGo = display.newText( text.wayToGo, 250, 400, "Arial", 40)
@@ -38,9 +38,11 @@ end
 
 function correctTap( event )
   if quizNumber <= #quiz and
-     quiz[quizNumber].clickOn == event.target.item then
+    quiz[quizNumber].clickOn == event.target.item then
+    -- prevent a second tap
+    quiz[quizNumber].clickOn = ""
     -- cause the apple to drop and then display the next quiz
-    transition.to( currentImage, { time=500, alpha=0, y=(currentImage.y+200), onComplete=nextQuiz } )
+     transition.to( currentImage, { time=500, alpha=0, y=(currentImage.y+200), onComplete=nextQuiz } )
   end
 end
 
@@ -64,8 +66,8 @@ function t.open()
   
   -- Add Bark image
   local Bark = display.newImage(group, "Graphics/IRLBark.png" )
-  Bark.x = 950 Bark.y = 540
-  Bark.width = 180 Bark.height = 190
+  Bark.x = 950 Bark.y = 570
+  Bark.width = 220 Bark.height = 230
 
   -- Add the tap rectangles for the tree
   -- Leaves
