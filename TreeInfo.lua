@@ -28,11 +28,7 @@ function t.open()
   Bracket.x= 688; Bracket.y = 615
   Bracket.width = 600 Bracket.height = 600
   
-  local Bark = display.newImage(group, "Graphics/IRLBark.png" )
-  Bark.x = 475 Bark.y = 340
-  Bark.width = 450 Bark.height = 450
-  
-  local
+
   
   --Adds a rectangle for the word roots
   -- and sets the size and location
@@ -109,6 +105,10 @@ local wordLeaves = display.newText(group,"Leaves" , 200, 485, "Arial", 60 )
 wordLeaves:setFillColor( 0, 0, 0 )
 wordLeaves.destination = blankLeavesBox
 wordLeaves.origin = leavesBox
+
+  local Bark = display.newImage(group, "Graphics/IRLBark.png" )
+  Bark.x = 775 Bark.y = 500
+  Bark.width = 65 Bark.height = 70
 
 function wordDrag( event )
   local target = event.target
