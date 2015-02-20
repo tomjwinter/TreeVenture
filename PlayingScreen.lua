@@ -80,21 +80,21 @@ function t.open()
   hungerBar:setFillColor( 0, 0, 0 )
   
   --Adds the inside of the hunger bar
-  local fhru = bar( 100, 0, 0, 1, fhruu, 280, 660 )
+  local fhru = bar( 100, 0, 0, 1, fhruu, group, 280, 660 )
   --display.newRect( group, 280, 660, 147, 37 )
   --fhruu:setFillColor( 0, 0, 1 )
   
   --This displays a rectangle for the building bar
   local buildingBar = display.newRect(group, 440, 730, 155, 45) 
   buildingBar:setFillColor( 0, 0, 0 )
-  local dhru = bar( 100, 0, 1, 0, dhruu, 440, 730 )
+  local dhru = bar( 100, 0, 1, 0, dhruu, group, 440, 730 )
   --display.newRect( group, 440, 730, 147, 37 )
   --dhruu:setFillColor(0, 1, 0 )
   
   --This displays a rectangle for the weight bar
   local weightBar = display.newRect(group, 600, 660, 155, 45)
   weightBar:setFillColor( 0, 0, 0 )
-  local rhru = bar( 100, 1, 0.5, 0, rhruu, 600, 660 )
+  local rhru = bar( 100, 1, 0.5, 0, rhruu, group, 600, 660 )
   --display.newRect( group, 600, 660, 147, 37 )
   --rhruu:setFillColor( 1, .5, 0 )
   

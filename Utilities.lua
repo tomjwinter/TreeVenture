@@ -1,8 +1,8 @@
 local t = {}
 
-function bar( percent, Rcolor, Gcolor, Bcolor, name, x, y )
+function bar( percent, Rcolor, Gcolor, Bcolor, name, group, x, y )
   local size = ( percent * 147 / 100 )
-  name = display.newRect( x, y, size, 37 )
+  name = display.newRect( group, x, y, size, 37 )
   name:setFillColor( Rcolor, Gcolor, Bcolor )
 end
 
