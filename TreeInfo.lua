@@ -147,7 +147,7 @@ function wordDrag( event )
    function info2 ( event )
     infoString:removeSelf ()
     infoString = display.newGroup ()
-    event.target.info = display.newText( infoString, event.target.string, 300, 584, 500, 700, "Arial", 60 )
+    event.target.info = display.newText( infoString, event.target.string, 220, 444, 430, 700, "Arial", 60 )
     event.target.info:setFillColor( 0, 0, 0 )
     event.target.isClicked = true
     if wordLeaves.isClicked == true and wordBark.isClicked == true and
