@@ -76,21 +76,21 @@ function t.open()
  wordRoot:setFillColor( 0, 0, 0 )
  wordRoot.destination = blankRootsBox
  wordRoot.origin = rootsBox
- 
+ wordRoot.string = text.rootsString
  --Displays the word trunk
  -- and sets the size, font, and color
  local wordTrunk = display.newText(group,"Trunk" , 200, 255, "Arial", 60 )
  wordTrunk:setFillColor( 0, 0, 0 )
  wordTrunk.destination = blankTrunkBox
  wordTrunk.origin = trunkBox
- 
+ wordTrunk.string = text.trunkString
  --Displays the word bark
  -- and sets the size, font, and location
  local wordBark = display.newText(group,"Bark" , 200, 370, "Arial", 60 )
  wordBark:setFillColor( 0, 0, 0 )
  wordBark.destination = blankBarkBox
  wordBark.origin = barkBox
-
+ wordBark.string = text.barkString
 --Displays the word branches
 -- and sets the size, font, and color
 local wordBranches = display.newText(group,"Branches" , 200, 715, "Arial", 60 )
@@ -105,7 +105,7 @@ local wordLeaves = display.newText(group,"Leaves" , 200, 485, "Arial", 60 )
 wordLeaves:setFillColor( 0, 0, 0 )
 wordLeaves.destination = blankLeavesBox
 wordLeaves.origin = leavesBox
-
+wordLeaves.string = text.leavesString
   local Bark = display.newImage(group, "Graphics/IRLBark.png" )
   Bark.x = 775 Bark.y = 500
   Bark.width = 65 Bark.height = 70
