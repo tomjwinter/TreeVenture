@@ -107,8 +107,8 @@ wordLeaves.destination = blankLeavesBox
 wordLeaves.origin = leavesBox
 wordLeaves.string = text.leavesString
   local Bark = display.newImage(group, "Graphics/IRLBark.png" )
-  Bark.x = 775 Bark.y = 500
-  Bark.width = 65 Bark.height = 70
+  Bark.x = 775 Bark.y = 520
+  Bark.width = 180 Bark.height = 190
 
 function wordDrag( event )
   local target = event.target
