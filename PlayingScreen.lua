@@ -59,11 +59,10 @@ function t.open()
   local backpackButton = display.newRect(group, 775, 670, 130, 160 )
   backpackButton:setFillColor( 0, 0, 0.6, 0.2 )
   function backpackPress()
-    treeGame1Screen.open()
     group:removeSelf()
   end
    backpackButton:addEventListener( "tap", backpackPress )
-  
+ 
   --This creates a function
   -- this function tells the device to open the journal screen
   function journalPress()
