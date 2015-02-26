@@ -10,10 +10,10 @@ function t.open()
   -- Display that image on the screen,
   -- Put it in the holding bin group,
   -- and assign it to a varible called backgroundImage
-  local backgroundImage = display.newImage( group, "Graphics/Start Screen.jpg" )
+  local backgroundImage = display.newImage( group, "Graphics/Start Screen.png" )
 
   --Assign the location of the center of the image
-  backgroundImage.x = 512; backgroundImage.y = 384
+  backgroundImage.x = 512; backgroundImage.y = 383
   
   --Assign the width and high so the background image fills the screen
   backgroundImage.width = 1024; backgroundImage.height = 768
