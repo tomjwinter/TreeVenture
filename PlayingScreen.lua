@@ -65,10 +65,10 @@ function t.open()
  
   --This creates a function
   -- this function tells the device to open the journal screen
-  function journalPress()
-    journalScreen.open()
+  --function journalPress()
+    --fallingApples.open()
     --group:removeSelf()
-  end
+  --end
   
   --This tells the device to listen for a tap
   -- when it gets the tap it does the journalPress function
